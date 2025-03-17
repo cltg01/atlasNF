@@ -24,49 +24,6 @@ CREATE TABLE usuarios (
     tipo_usuario ENUM('comum', 'admin') NOT NULL DEFAULT 'comum'
 );
 
-user banco: gtrack
-senha: 6Tr@ck6@6
-
---- NOVA TABELA DIA 07/03 ----
-
-CREATE DATABASE controle_entregas_db;
-USE controle_entregas_db;
-
--- Tabela de Filiais
-CREATE TABLE filiais (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL
-);
-
--- Tabela de Clientes
-CREATE TABLE clientes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    codigo_cliente VARCHAR(20) UNIQUE NOT NULL,
-    razao_social VARCHAR(100) NOT NULL,
-    cnpj_cpf VARCHAR(20) UNIQUE NOT NULL
-);
-
--- Tabela de Transportadoras
-CREATE TABLE transportadoras (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    cnpj VARCHAR(20) UNIQUE NOT NULL
-);
-
--- Tabela de Entregas
-CREATE TABLE entregas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    filial_id INT NOT NULL,
-    cliente_id INT NOT NULL,
-    transportadora_id INT NOT NULL,
-    numero_nota VARCHAR(50) NOT NULL,
-    foto_nota VARCHAR(255),
-    data_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
-    boleto_entregue ENUM('Sim', 'Não') NOT NULL DEFAULT 'Não',
-    FOREIGN KEY (filial_id) REFERENCES filiais(id) ON DELETE CASCADE,
-    FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE,
-    FOREIGN KEY (transportadora_id) REFERENCES transportadoras(id) ON DELETE CASCADE
-);
 
 
 
