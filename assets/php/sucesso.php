@@ -61,7 +61,7 @@
 <body>
     <div class="success-container">
     <div class="logo">
-            <a href="index.html"> <img src="../imagens/logo-gagliardi.png" alt="Logo_atlastrack" width="300px"
+            <a href="index.html"> <img src="" alt="Logo_atlastrack" width="300px"
                     height="70"></a>
         </div>
         <h1 class="success-message">Entrega Realizada!</h1>

@@ -103,7 +103,7 @@ $numero_nota_selecionado = $_SESSION['numero_nota_selecionado'] ?? '';
     <meta name="description" content="Relatório de Entregas">
     <title>Relatório de Entregas</title>
     <link rel="stylesheet" href="../css/style-relatorios.css">
-    <link rel="icon" type="image/png" href="assets/imagens/icon-gtrack.png">
+    <link rel="icon" type="image/png" href="">
 </head>
 
 <body>
