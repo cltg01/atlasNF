@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Controle de Entrega">
+    <title>Controle de Entrega</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/imagens/icon-gtrack.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <form id="formEntrega" enctype="multipart/form-data" action="assets/php/salvar.php" method="POST">
+            
+            <div class="logo">
+                <a href=""> <img src="assets/imagens/LOGO G TRACK_Prancheta 1.png" alt="Logo_atlasNF" width="300px"
+                        height="100"></a>
+            </div>
+            <label for="cnpj_cpf_cliente"><strong>CNPJ ou CPF:</strong></label>
+            <input type="number" id="cnpjCpf" name="cnpj_cpf_cliente" oninput="preencherCampos()" maxlength="14" required
+                placeholder="ex: 08417568000114">
+
+            <label for="filial"><strong>Filial:</strong></label>
+            <input type="text" id="filial" name="filial" placeholder="preenchimento automático" readonly>
+
+            <label for="codigo_cliente"><strong>Código do Cliente:</strong></label>
+            <input type="text" id="codigo_cliente" name="codigo_cliente" maxlength="7"
+                placeholder="preenchimento automático" readonly >
+
+            <label for="razao_social"><strong>Razão Social:</strong></label>
+            <input type="text" id="razao_social" name="razao_social" placeholder="preenchimento automático" readonly>
+
+            <label for="transportadora"><strong>Transportadora:</strong></label>
+            <select id="transportadora" name="transportadora" required onchange="preencherCNPJ()">
+                <option value="">Selecione</option>
+            </select>
+
+            <label for="cnpj"><strong>CNPJ da Transportadora:</strong></label>
+            <input type="text" id="cnpj_transportadora" name="cnpj_transportadora" placeholder="preenchimento automático" readonly>
+
+            <label for="numero_nota"><strong>Número da Nota Fiscal:</strong></label>
+            <input type="number" maxlength="9" id="numero_nota" name="numero_nota" placeholder="Ex: 4874-4" required>
+
+            <label for="fotoNota"><strong>Foto da Nota Fiscal:</strong></label>
+            <input type="file" id="fotoNota" name="fotoNota" accept="image/*"  capture="environment" required>
+            
+            <label><strong>O boleto foi entregue?</strong></label>
+            <div>
+                <label for="boletoSim" class="informacao">Sim<input type="radio" id="boletoSim" name="boleto_entregue"
+                        value="Sim" required></label>
+                <label for="boletoNao" class="informacao">Não<input type="radio" id="boletoNao" name="boleto_entregue"
+                        value="Não" required></label>
+            </div>
+
+            <input type="hidden" id="dataHora" name="dataHora">
+
+            <button type="submit">Registrar</button>
+            <a href="assets/php/logout.php">Sair</a>
+
+        </form>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

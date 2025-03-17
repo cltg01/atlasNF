@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Magistral-Light';
+    src: url(../fonts/Magistral-Light.ttf) format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Magistral';
+    src: url(../fonts/Magistral-Medium.ttf) format('truetype');
+    font-style: normal;
+} 
+
+
+/* Estilo geral */
+body {
+    font-size: 13px;
+    font-family: 'Magistral-Light', sans-serif;
+    min-height: 100vh;
+    background-color: #eeeeee;
+  }
+.logo{
+    text-align: center;
+}
+select{
+    background-color: #ffffff;
+}
+
+input, select, button{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    
+}
+button{
+    background-color: navy;
+    color: #ffffff;
+    box-shadow: none !important;
+}
+button:hover{
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: none !important;
+}
+
+table{
+    padding: 10px;
+    border-radius: 5px;
+    width: 1330px;
+    background-color: #ffffff;
+}
+thead{
+    position: sticky;
+    top: 0;
+}
+th{
+    border: none;
+    font-weight: normal;
+    background-color: navy;
+    color: #ffffff;
+}
+th, td{
+    border: 1px solid rgb(219, 218, 218);
+}
+ td:hover{
+    background-color: #d1cbcb;
+}
+h2{
+    font-family: 'Magistral', sans-serif;
+}
+th{
+    font-family: 'Magistral', sans-serif;
+}
+#formulario{
+display: flex;
+}
+/* .container{
+    margin-left: 40px;
+} */
+
+ #nao-encontrado{
+  
+    text-align: center;
+ }
+ #color{
+    color: red;
+    font-weight: bold;
+ }
+ #head-filtro{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: px;
+ }
+ #filtro-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px; 
+    margin: 0;
+    padding: 0;
+ }
+ .filtro-item label {
+    margin-bottom: 5px;
+    margin-left: 6px;
+}
+
+.filtro-item input {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.filtro-item select{
+    width: 80%;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+button a{
+    color: #ffffff;
+    padding: 10px;
+}
+button.sair:hover{
+background-color: #000000;
+}
